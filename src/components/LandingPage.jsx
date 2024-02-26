@@ -9,7 +9,7 @@ import Eyes from './Eyes';
 function LandingPage() {
     return (
         <>
-            {/* <div className='w-full bg-zinc-100'>
+            <div className='w-full bg-zinc-100'>
                 <div className='textStructure mt-20 ml-12'>
 
                     {["We Create", "Eye-Opening", "Presentations"].map((item, index) => {
@@ -63,7 +63,7 @@ function LandingPage() {
 
             </div>
             <MarqueeEffect />
-            <About /> */}
+            <About />
             <Eyes />
 
         </>
