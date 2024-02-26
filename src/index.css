@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: "FoundersGrotesk-Semibold";
+    src: url("./fonts/FoundersGrotesk-Semibold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url("./fonts/NeueMontreal-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "icomoon";
+    src: url("./fonts/icomoon.woff") format("woff");
+  }
+}
