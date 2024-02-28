@@ -4,6 +4,7 @@ import TitleImg from '../assets/titleImg.png'
 import MarqueeEffect from './MarqueeEffect';
 import About from './About';
 import Eyes from './Eyes';
+import Projects from './Projects';
 
 
 function LandingPage() {
@@ -21,8 +22,8 @@ function LandingPage() {
 
 
                                 <h1 className='font-[FoundersGrotesk-Semibold]
-                            uppercase text-[9.6vw] tracking-[-0.020em] 
-                            text-[#212121] leading-[7vw] '>
+                                uppercase text-[9.6vw] tracking-[-0.020em] 
+                                text-[#212121] leading-[7vw] '>
                                     {item}
                                 </h1>
 
@@ -41,7 +42,7 @@ function LandingPage() {
                         "From the first pitch to IPO"
                     ].map((item, index) => {
                         return <p key={index} className='text-[#212121]
-                     font-[NeueMontreal-Regular]'>
+                        font-[NeueMontreal-Regular]'>
                             {item}
                         </p>
                     })}
@@ -65,6 +66,7 @@ function LandingPage() {
             <MarqueeEffect />
             <About />
             <Eyes />
+            <Projects />
 
         </>
     )

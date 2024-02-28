@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import eyesBg from '../assets/eyesBg.jpg'
 
 function Eyes() {
 
@@ -11,13 +12,13 @@ function Eyes() {
     function Angle(element) {
         if (!element.current) return;
 
-        let elementX = element.current.offsetLeft + element.current.clientWidth / 2;
-        let elementY = element.current.offsetTop + element.current.clientHeight / 2;
+        let elementX = element.current.getBoundingClientRect().left + element.current.clientWidth / 2;
+        let elementY = element.current.getBoundingClientRect().top + element.current.clientHeight / 2;
 
         const radians = Math.atan2(mouse.y - elementY, mouse.x - elementX);
-        const rotation = radians * (180 / Math.PI);
+        const angle = radians * (180 / Math.PI)
 
-        return rotation + 90
+        return angle + 91.8
     }
 
     const getMouse = (e) => {
@@ -36,25 +37,29 @@ function Eyes() {
 
 
     return (
-        <div className='eyeContainer w-full h-screen bg-zinc-700 
-         items-center flex justify-center gap-12'>
+        <div
+            style={{backgroundImage: `url(${eyesBg})`}}
+            className='eyeContainer w-full h-screen bg-cover bg-center 
+                items-center flex justify-center gap-12'>
 
             <div
-                ref={eyeLeft}
-                style={{ transform: `rotate(${Angle(eyeLeft)}deg)` }}
                 className="eyeLeft w-[12rem] h-[12rem] bg-zinc-100 rounded-full ">
 
-                <div className="lens w-[9rem] h-[9rem] bg-zinc-900 rounded-full relative
+                <div
+                    ref={eyeLeft}
+                    style={{ transform: `rotate(${Angle(eyeLeft)}deg)` }}
+                    className="lens w-[9rem] h-[9rem] bg-zinc-900 rounded-full relative
                 mt-6 ml-6 after:w-[1.5rem] after:h-[1.5rem] after:bg-zinc-100 
                 after:rounded-full after:absolute after:ml-14 after:mt-[1.5px] "></div>
             </div>
 
             <div
-                ref={eyeRight}
-                style={{ transform: `rotate(${Angle(eyeRight)}deg)` }}
                 className="eyeRight w-[12rem] h-[12rem] bg-zinc-100 rounded-full ">
 
-                <div className="lens w-[9rem] h-[9rem] bg-zinc-900 rounded-full relative
+                <div
+                    ref={eyeRight}
+                    style={{ transform: `rotate(${Angle(eyeRight)}deg)` }}
+                    className="lens w-[9rem] h-[9rem] bg-zinc-900 rounded-full relative
                 mt-6 ml-6 after:w-[1.5rem] after:h-[1.5rem] after:bg-zinc-100 
                 after:rounded-full after:absolute after:ml-14 after:mt-[1.5px] "></div>
             </div>

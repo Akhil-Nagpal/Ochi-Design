@@ -54,7 +54,7 @@ function About() {
                         <div className='w-2 h-2 bg-zinc-100 rounded-full'></div>
                     </button>
                 </div>
-                <div className=' w-1/2 h-[80vhvh] mb-14'>
+                <div className=' w-1/2 h-[68vh] mb-14'>
                     <img className='rounded-xl' src={ApproachImg} alt="stratergy" />
                 </div>
             </div>
