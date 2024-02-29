@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="w-full bg-zinc-100">
+    <div className="w-full bg-zinc-100 rounded-tl-2xl rounded-tr-2xl">
       <div className="grid grid-cols-2 m-10">
         <div>
           <h1 className="text-[#212121] text-[9vw] font-[FoundersGrotesk-Semibold] uppercase -mb-20">
