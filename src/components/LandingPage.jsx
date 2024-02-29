@@ -5,6 +5,8 @@ import MarqueeEffect from "./MarqueeEffect";
 import About from "./About";
 import Eyes from "./Eyes";
 import Projects from "./Projects";
+import StartProject from "./StartProject";
+import eyesBg from "../assets/eyesBg.jpg";
 
 function LandingPage() {
   return (
@@ -71,8 +73,9 @@ function LandingPage() {
       </div>
       <MarqueeEffect />
       <About />
-      <Eyes />
+      <Eyes url={eyesBg} changes={"h-screen bg-cover bg-center"} />
       <Projects />
+      <StartProject />
     </>
   );
 }

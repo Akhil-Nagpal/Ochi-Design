@@ -7,28 +7,27 @@ import Ochi from "../assets/Ochi.png";
 import Clutch from "../assets/Clutch.png";
 import Academy from "../assets/Academy.png";
 
-const data = [
-  {
-    name: "Fyde",
-    img: Fyde,
-  },
-  {
-    name: "Vise",
-    img: Vise,
-  },
-  {
-    name: "Frame",
-    img: Frame,
-  },
-  {
-    name: "Premium Blend",
-    img: PBFront,
-  },
-];
-
 function Projects() {
+  const data = [
+    {
+      name: "Fyde",
+      img: Fyde,
+    },
+    {
+      name: "Vise",
+      img: Vise,
+    },
+    {
+      name: "Frame",
+      img: Frame,
+    },
+    {
+      name: "Premium Blend",
+      img: PBFront,
+    },
+  ];
   return (
-    <div className="w-full bg-zinc-100 rounded-tl-2xl rounded-tr-2xl mb-10 ">
+    <div className="w-full  rounded-tl-2xl rounded-tr-2xl mb-10 ">
       <div className="p-10">
         <h1
           className="text-[3.9vw] font-[NeueMontreal-Regular] leading-none 
@@ -66,7 +65,7 @@ function Projects() {
 
       <hr className="w-full border-zinc-400 mt-10 " />
 
-      <div className="grid grid-cols-12 mx-16 top-20 gap-3 pt-28 pb-60">
+      <div className="grid grid-cols-12 mx-16 top-20 gap-3 pt-28 pb-52">
         <div className=" relative h-[60vh] col-span-6 bg-[#004D43] rounded-xl">
           <img
             className=" w-40 relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
