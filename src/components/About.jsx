@@ -1,9 +1,11 @@
 import React from "react";
 import ApproachImg from "../assets/approach.jpg";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 function About() {
+  const { scroll } = useLocomotiveScroll();
   return (
-    <div className="w-full bg-[#CDEA68] rounded-tl-2xl rounded-tr-2xl">
+    <div className="w-full bg-[#CDEA68] rounded-tl-2xl rounded-tr-2xl z-30">
       <div className=" p-10 ">
         <h1 className=" pt-14 text-[3.9vw] text-[#212121] font-[NeueMontreal-Regular] leading-none">
           Ochi is a strategic partner for fast-growing tech businesses that need

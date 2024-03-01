@@ -1,12 +1,7 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import TitleImg from "../assets/titleImg.png";
-import MarqueeEffect from "./MarqueeEffect";
-import About from "./About";
-import Eyes from "./Eyes";
-import Projects from "./Projects";
-import StartProject from "./StartProject";
-import eyesBg from "../assets/eyesBg.jpg";
+import { motion } from "framer-motion";
 
 function LandingPage() {
   return (
@@ -17,7 +12,14 @@ function LandingPage() {
             return (
               <div key={index} className="flex gap-2">
                 {index === 1 && (
-                  <img
+                  <motion.img
+                    initial={{ width: 0 }}
+                    animate={{ width: "9.5vw" }}
+                    transition={{
+                      duration: 1,
+                      ease: [0.87, 0, 0.13, 1],
+                      delay: "0.5",
+                    }}
                     className=" w-[9.5vw] h-[6vw] mt-4 rounded-md overflow-hidden"
                     src={TitleImg}
                     alt="titleImage"
@@ -71,11 +73,6 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <MarqueeEffect />
-      <About />
-      <Eyes url={eyesBg} changes={"h-screen bg-cover bg-center"} />
-      <Projects />
-      <StartProject />
     </>
   );
 }
