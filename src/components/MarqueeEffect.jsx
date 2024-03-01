@@ -6,7 +6,11 @@ function MarqueeEffect() {
   const { scroll } = useLocomotiveScroll();
 
   return (
-    <div className=" w-full rounded-tl-2xl rounded-tr-2xl bg-[#004D43] z-30 py-6 mt-[7vw]">
+    <div
+      data-scroll
+      data-scroll-speed="5"
+      className=" w-full rounded-tl-2xl rounded-tr-2xl bg-[#004D43] z-30 py-6 "
+    >
       <hr className=" border-zinc-400 w-full relative top-[5rem]" />
       <Marquee speed={150}>
         <div className="text-zinc-50 whitespace-nowrap flex gap-10 overflow-hidden">

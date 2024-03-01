@@ -38,7 +38,7 @@ function Projects() {
       </div>
       <hr className="w-full border-zinc-400 " />
 
-      <div className="container grid grid-cols-2 gap-5 mt-10 mx-10 relative">
+      <div className="container grid grid-cols-2 gap-5 mt-10 mx-10 ">
         {data.map((item) => (
           <div className=" rounded-xl h-[80vh] gap-5 overflow-hidden">
             <h3

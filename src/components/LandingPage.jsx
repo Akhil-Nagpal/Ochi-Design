@@ -2,11 +2,14 @@ import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import TitleImg from "../assets/titleImg.png";
 import { motion } from "framer-motion";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 function LandingPage() {
+  const { scroll } = useLocomotiveScroll();
+
   return (
     <>
-      <div className="w-full bg-zinc-100">
+      <div data-scroll data-scroll-speed="-1" className="w-full bg-zinc-100">
         <div className="textStructure mt-20 ml-12">
           {["We Create", "Eye-Opening", "Presentations"].map((item, index) => {
             return (
